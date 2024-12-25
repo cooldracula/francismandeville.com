@@ -1,0 +1,100 @@
+:root {
+  --white: #fff;
+  --black: #15141A;
+  --gray: rgb(235, 235, 235);
+
+  --color_bg: var(--white);
+  --color_text: var(--black);
+  --book-cover-color: var(--white);
+
+  --serif: 'charter';
+  --font_title: var(--serif);
+  --font_body: var(--serif);
+  --point-size: 20px;
+  --line-height: 133%;
+  --line-length: 32em;
+
+  --nav-pad: 0.5rem;
+}
+
+body, html {
+    background: var(--white);
+    margin: 0;
+    padding; 0;
+    box-sizing: border-box;
+    font-family: var(--serif);
+    font=size: var(--point-size);
+}
+
+h1 {
+    font-size: 3rem;
+    padding: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--black);
+}
+
+h1 i {
+    display: block;
+    font-weight: 100;
+    font-size: 2.8rem;
+}
+
+.book {
+    display: flex;
+    background: var(--book-cover);
+    width: 300px;
+    height: 400px;
+    background-size: contain;
+    margin-bottom: 0.5rem;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.book-list {
+    max-width: 100%;
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+a.hidden {
+    opacity: 0;
+}
+
+.book a {
+    color: var(--book-cover-color);
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+.book-list_item {
+    max-width: 300px;
+}
+
+.book-link {
+    font-size: 1.33rem;
+    text-decoration: none;
+    color: var(--black);
+}
+
+.book-link:after {
+    content: " →";
+    color: cornflowerblue;
+}
+
+.book-link:hover {
+    background: cornflowerblue;
+}
+
+@media(max-width: 667px) {
+    h1, h1 i {
+        font-size: 2rem;
+    }
+
+    h1 i {
+        display: block;
+    }
+}
